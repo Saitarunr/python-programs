@@ -1,0 +1,37 @@
+#leetcode-69 this one advices not to use built in methods but yeah i did use anyway!!!
+
+import math
+from decimal import Decimal
+class Solution(object):
+    def mySqrt(self, x):
+        """
+        :type x: int
+        :rtype: int
+        """
+        return int(math.sqrt(x))
+
+
+this one runs at 0ms since there's no actual process taking place
+
+a more logical approach which ive found in the comments would be this
+
+
+class Solution(object):
+    def mySqrt(self, x):
+        n = 0.5
+        s = list(str(x**n))
+        g = []
+        for i in s:
+            if i == '.':
+                break
+            g.append(i)
+        print g
+        sum = 0
+        mult = len(g)
+        for l in g:
+            r = 10 ** mult
+            sum += int(l) * r
+            mult -=1
+        
+        return sum/10
+      #   this is about the sqrt method
