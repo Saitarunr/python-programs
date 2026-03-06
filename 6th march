@@ -1,0 +1,91 @@
+# Input: arr[] = [2, 3, -8, 7, -1, 2, 3]
+# Output: 11
+# Explanation: The subarray [7, -1, 2, 3] has the largest sum 11.
+
+# a=[2,3,-8,7,-1,2,3]
+# positi=[]
+
+# for val in a:
+#     positi.append(val)
+
+#     if sum(positi) < 0:
+#         positi = []
+
+# print(positi, sum(positi))
+# 9. Find Leaders in an Array
+# (Leader: element greater than all elements to its right)
+# Input: [16,17,4,3,5,2]
+# Output: 17,5,2
+# a=[16,17,4,3,5,2]
+
+# leaders=[]
+# max_val=a[-1]
+
+# leaders.append(max_val)
+
+# for val in a[-2::-1]:
+    
+#     if val > max_val:
+#         leaders.append(val)
+#         max_val = val
+
+# leaders = leaders[::-1]
+
+# print(leaders)
+# 8. Rotate Array by K Positions
+# Input: [1,2,3,4,5], K=2
+# Output: [4,5,1,2,3]
+# a=[1,2,3,4,5]
+# b=a.copy()
+# k=3
+# new=[]
+# for val in range(k+1,len(a)+1):
+#     new.append(a[val])
+#     a.remove(a[val])
+# for value in a:
+#     new.append(value)
+# print(new)
+
+# a=[1,2,3,4,5]
+# k=3
+
+# new = a[k:] + a[:k]
+# print(new)
+# 16. Check Armstrong Number
+# Input: 153
+# Output: Yes
+# a = "153"
+# b = len(a)
+
+# digits = [int(x) for x in a]
+
+# new = []
+
+# for val in digits:
+#     power = val**b
+#     new.append(power)
+
+# c = sum(new)
+
+# if c == int(a):
+#     print("yes")
+# else:
+#     print("no")
+
+# 17. Find Power of a Number (Without Using Built-in Function)
+# Input: 2^5
+# Output: 32
+# a=2
+# b=5
+# new=[]
+# c=b
+# while(c<=b):
+#     n=a*a
+#     new.append(n)
+#     c-=1
+# print(sum(new))
+# 18. Convert Decimal to Binary
+# Input: 10
+# Output: 1010
+# a=10
+# print(bin(a))
